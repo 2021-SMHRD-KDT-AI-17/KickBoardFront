@@ -6710,8 +6710,8 @@ fieldset:disabled .btn {
 
 .alert {
     --bs-alert-bg: transparent;
-    --bs-alert-padding-x: 1rem;
-    --bs-alert-padding-y: 1rem;
+    --bs-alert-padding-x: 16px;
+    --bs-alert-padding-y: 7px;
     --bs-alert-margin-bottom: 1rem;
     --bs-alert-color: inherit;
     --bs-alert-border-color: transparent;
@@ -20232,5 +20232,10 @@ ul {
 }
 .news-img{
     max-width: 250px;
-    max-height: 150px;
+    max-height: 120px;
+}
+.bg-img{
+    background-image: url(/연습/assets/images/backgrounds/bg4.jpg);
+    background-size: cover;
+    background-position: center;
 }
