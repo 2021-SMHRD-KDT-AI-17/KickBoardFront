@@ -2666,6 +2666,7 @@ progress {
     }
 }
 
+  
 .table {
     --bs-table-color: var(--bs-body-color);
     --bs-table-bg: transparent;
@@ -20238,4 +20239,24 @@ ul {
     background-image: url(/연습/assets/images/backgrounds/bg4.jpg);
     background-size: cover;
     background-position: center;
+}
+.predict-box{
+    height: 800px;
+}
+.chat-box{
+    max-height: 100%;
+}
+.small-logo{
+    max-width: 10%;
+    border-radius: 10%;
+}
+.field-logo{
+    max-width: 5%;
+    border-radius: 10%;
+}
+.soccer-field-container{
+    height: 100%; 
+    background-image: url('/연습/assets/images/products/filed1.jpg');
+    background-size: cover;
+    position: relative;
 }
