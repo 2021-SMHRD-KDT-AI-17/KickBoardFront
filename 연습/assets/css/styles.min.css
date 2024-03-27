@@ -20276,3 +20276,9 @@ ul {
     color: white;
     cursor: pointer;
 }
+.invisible{
+    display: none;
+}
+#suggest_items{
+    overflow: auto;
+}
