@@ -20239,6 +20239,8 @@ ul {
     background-image: url(/연습/assets/images/backgrounds/bg4.jpg);
     background-size: cover;
     background-position: center;
+    max-height: 100%;
+    max-width: 100%;
 }
 .predict-box{
     height: 800px;
@@ -20259,4 +20261,18 @@ ul {
     background-image: url('/연습/assets/images/products/filed1.jpg');
     background-size: cover;
     position: relative;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+}
+.text-end-sub{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.input-file-button{
+    padding: 7px 20px;
+    background-color: #49BEFF;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
 }
