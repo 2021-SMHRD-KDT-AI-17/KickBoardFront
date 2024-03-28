@@ -30,7 +30,7 @@ const sample=(i)=>{
               let banButton=div.appendChild(document.createElement("button"));
               banButton.className="btn btn-primary";
               email.innerText=email_text+`${i}번`;
-              joindate.joindate=joindate_text+`${i}번`;
+              joindate.innerText=joindate_text;
               chatBlockButton.className="btn btn-primary";
               isBlockChat.innerText=isBlockChat_text;
               isUserBan.innerText=isUserBan_text;
