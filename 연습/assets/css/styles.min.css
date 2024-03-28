@@ -20197,11 +20197,6 @@ ul {
 .message-content {
     margin-left: 5px; /* 메시지 내용과 발신자 이름 사이 여백 */
 }
-.formation-img{
-    width: 50px; 
-    height: 50px;
-    border-radius: 50%;
-}
 .jersey-number,
 .player-name {
     color: white;
@@ -20244,7 +20239,13 @@ ul {
 }
 .predict-box{
     height: 800px;
+    overflow-y: auto;
 }
+.predict-card{
+    height: 50%; /* predict-card의 높이를 부모 요소인 predict-box의 50%로 설정 */
+    overflow-y: auto; /* 내용이 넘치면 스크롤이 생기도록 설정 */
+}
+
 .chat-box{
     max-height: 100%;
 }
@@ -20256,13 +20257,9 @@ ul {
     max-width: 5%;
     border-radius: 10%;
 }
-.soccer-field-container{
-    height: 100%; 
+.field-img{
     background-image: url('/연습/assets/images/products/filed1.jpg');
     background-size: cover;
-    position: relative;
-    justify-content: center; /* 수평 가운데 정렬 */
-    align-items: center; /* 수직 가운데 정렬 */
 }
 .text-end-sub{
     position: absolute;
@@ -20275,4 +20272,39 @@ ul {
     border-radius: 4px;
     color: white;
     cursor: pointer;
+}
+.admin-button .btn{
+    width: 120px;
+}
+.mx100-mh100{
+    max-width: 100%;
+    max-height: 100%;
+}
+.team-lineup-a{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+.team-lineup-b{
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+.table-img {
+    background-image: url('/연습/assets/images/products/green.jpg');
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+}
+.table-text-color tr td {
+    color: white;
+    font-weight : bold;
+    width: 5px;
+}
+.team-name-row td {
+    border-bottom: 1px solid white; /* 보더 색상을 원하는 색상으로 변경 가능 */
 }

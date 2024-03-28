@@ -165,30 +165,73 @@
       <div class="container-fluid">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title fw-semibold mb-4"><i></i> 회원정보 수정</h5>
+            <h5 class="card-title fw-semibold mb-4">My Profile</h5>
             <div class="row">
-              <div class="col-md-6">
-                <img src="https://via.placeholder.com/400" class="img-fluid mb-4" alt="Product Image">
+              <div class="col-md-6 d-flex justify-content-center align-items-center">
+                <div class="text-center">
+                  <div class="alert alert-secondary" role="alert">
+                    '누구누구'님 환영합니다!
+                  </div>
+                  <img src="https://via.placeholder.com/400" class="img-fluid mb-4" alt="Product Image">
+                </div>
               </div>
-              <div class="col-md-6">
+              
+              <div class="col-md-6 d-flex flex-column justify-content-between">
                 <h4 class="mb-3">회원정보 수정</h4>
-                <h5 class="mb-4">이름이랑 어쩌고저쩌고</h5>
-
+                <p class="mb-4 fw-semibold">수정하고 싶은 닉네임과 비밀번호를 입력해 주세요.</p>
+              
                 <div class="input-group mb-3">
-                  <span class="input-group-text">닉네임</span>
-                  <input type="text" class="form-control" placeholder="nick">
+                  <span class="input-group-text" style="width: 100px;">Nickname</span>
+                  <input type="text" class="form-control" placeholder="닉네임을 입력해 주세요.">
                 </div>
-                  <div class="input-group mb-3">
-                  <span class="input-group-text">비밀번호</span>
-                  <input type="text" class="form-control" placeholder="pw">
-
+                <div class="input-group mb-3">
+                  <span class="input-group-text" style="width: 100px;">Password</span>
+                  <input type="text" class="form-control" placeholder="비밀번호를 입력해 주세요."><br>
                 </div>
-                <div class="text-end-sub">
-                  
-                  <label class="input-file-button" for="input-file">사진 선택</label>
+                <form>
+                  <div class="mb-3">
+                    <label for="teamselect" class="form-label">구단 설정</label>
+                    <div>
+                      <select id="teamselect" class="form-select">
+                        <option value="1">울산</option>
+                        <option value="2">포항</option>
+                        <option value="3">광주</option>
+                        <option value="4">전북</option>
+                        <option value="5">인천</option>
+                        <option value="6">대구</option>
+                        <option value="7">서울</option>
+                        <option value="8">대전</option>
+                        <option value="9">제주</option>
+                        <option value="10">강원</option>
+                        <option value="11">수원FC</option>
+                        <option value="12">김천</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-md-12">
+                      <label for="playerselect" class="form-label">선호 선수</label>
+                      <div id="playerList" class="input-group">
+                        <input type="text" id="playerselect" class="form-control" placeholder="선수명">
+                        <button id="addPlayerBtn" class="btn btn-outline-secondary" type="button">추가</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="selectteam" class="form-label">선호 구단</label>
+                    <input type="text" id="selTeam" class="form-control" disabled>
+                  </div>
+                  <div class="mb-3">
+                    <label for="selectplayer" class="form-label">선호 선수 <i class="ti ti-xbox-x"></i></label>
+                    <input type="text" id="selPlayer" class="form-control" disabled>
+                  </div>
+                </form>
+                <div class="mt-auto text-end">
+                  <!-- 사진 선택 -->
+                  <label class="btn btn-secondary" for="input-file">사진 선택</label>
                   <input type="file" id="input-file" style="display: none;">
+                  <!-- 수정  -->
                   <button type="submit" class="btn btn-primary">수정</button>
-
                 </div>
               </div>
             </div>
@@ -198,7 +241,8 @@
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
-  <script src="/연습/js모음/js.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/연습/assets/js/profile.js"></script>
   <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
   <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/sidebarmenu.js"></script>

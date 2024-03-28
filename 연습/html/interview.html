@@ -163,28 +163,31 @@
       <!--  Header End -->
       <div class="container-fluid">
         <h1 class="text-center"><a href="#"><i class="ti ti-ad-2"></i></a>interview</h1><br>
-        <div class="col-lg-12 d-flex align-items-stretch">
+        <div class="2 d-flex align-items-stretch">
           <div class="card w-100">
             <div class="card-body p-4">
               <h5 class="card-title fw-semibold mb-4">추천수 top 3</h5>
               <div class="table-responsive">
-                <table class="table text-nowrap mb-0 align-middle">
+                <table class="table text-nowrap mb-0 align-middle text-center justify-content-center">
                   <thead class="text-dark fs-4">
                     <tr>
-                      <th class="border-bottom">
+                      <th class="border-bottom col-lg-1">
                         <h6 class="fw-semibold mb-0">순위</h6>
                       </th>
-                      <th class="border-bottom">
+                      <th class="border-bottom col-lg-6">
                         <h6 class="fw-semibold mb-0">제목</h6>
                       </th>
-                      <th class="border-bottom">
+                      <th class="border-bottom col-lg-1">
                         <h6 class="fw-semibold mb-0">작성자</h6>
                       </th>
-                      <th class="border-bottom">
+                      <th class="border-bottom col-lg-1">
                         <h6 class="fw-semibold mb-0">대상</h6>
                       </th>
-                      <th class="border-bottom">
+                      <th class="border-bottom col-lg-1">
                         <h6 class="fw-semibold mb-0">추천수</h6>
+                      </th>
+                      <th class="border-bottom col-lg-2">
+                        <h6 class="fw-semibold mb-0">작성일</h6>
                       </th>
                     </tr>
                   </thead>
@@ -198,47 +201,50 @@
                         <p class="mb-0 fw-normal">제갈제니</p>
                       </td>
                       <td class="border-bottom-0">
-                        <div class="d-flex align-items-center gap-2">
-                          <span class="badge bg-primary rounded-3 fw-semibold">선수</span>
+                        <div class="d-flex align-items-center gap-2 justify-content-center">
+                          <span class="badge bg-primary rounded-3 fw-semibold ">선수</span>
                         </div>
                       </td>
                       <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0 fs-4"><i class="ti ti-thumb-up"></i>666</h6>
+                        <h6 class="fw-semibold mb-0 fs-4"><i class="ti ti-thumb-up"></i>666K</h6>
                       </td>
+                      <td class="col-lg-1">2024-03-25</td>
                     </tr> 
                     <tr>
                       <td class="border-bottom-0"><h6 class="fw-semibold mb-0">2</h6></td>
                       <td class="border-bottom-0">
-                          <h6 class="fw-semibold mb-1">Andrew McDownland</h6>                         
+                          <h6 class="fw-semibold mb-1">Andr123wnland</h6>                         
                       </td>
                       <td class="border-bottom-0">
-                        <p class="mb-0 fw-normal">Real Homes WP Theme</p>
+                        <p class="mb-0 fw-normal">123e</p>
                       </td>
                       <td class="border-bottom-0">
-                        <div class="d-flex align-items-center gap-2">
+                        <div class="d-flex align-items-center gap-2 justify-content-center">
                           <span class="badge bg-danger rounded-3 fw-semibold">구단</span>
                         </div>
                       </td>
                       <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0 fs-4"><i class="ti ti-thumb-up"></i>$24.5k</h6>
+                        <h6 class="fw-semibold mb-0 fs-4"><i class="ti ti-thumb-up"></i>24.5k</h6>
                       </td>
+                      <td class="col-lg-1">2024-03-25</td>
                     </tr> 
                     <tr>
                       <td class="border-bottom-0"><h6 class="fw-semibold mb-0">3</h6></td>
                       <td class="border-bottom-0">
-                          <h6 class="fw-semibold mb-1">Christopher Jamil</h6>                   
+                          <h6 class="fw-semibold mb-1">123l</h6>                   
                       </td>
                       <td class="border-bottom-0">
-                        <p class="mb-0 fw-normal">MedicalPro WP Theme</p>
+                        <p class="mb-0 fw-normal">M123</p>
                       </td>
                       <td class="border-bottom-0">
-                        <div class="d-flex align-items-center gap-2">
+                        <div class="d-flex align-items-center gap-2 justify-content-center">
                           <span class="badge bg-danger rounded-3 fw-semibold">구단</span>
                         </div>
                       </td>
                       <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0 fs-4"><i class="ti ti-thumb-up"></i>$12.8k</h6>
+                        <h6 class="fw-semibold mb-0 fs-4"><i class="ti ti-thumb-up"></i>12.8k</h6>
                       </td>
+                      <td class="col-lg-1">2024-03-25</td>
                     </tr>                   
                   </tbody>
                 </table>
@@ -249,81 +255,155 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title fw-semibold mb-4">인터뷰 목록 창</h5>
-            <table class="table">
+            <table class="table text-center justify-content-center">
               <thead>
                 <tr>
-                  <th scope="col" class="text-center">제목</th>
-                  <th scope="col" class="text-center">작성자</th>
-                  <th scope="col" class="text-center">대상</th>
-                  <th scope="col" class="text-center">날짜</th>
+                  <th scope="col" class= "col-lg-1">글번호</th>
+                  <th scope="col" class= "col-lg-6">제목</th>
+                  <th scope="col" class= "col-lg-1">작성자</th>
+                  <th scope="col" class= "col-lg-1">대상</th>
+                  <th scope="col" class= "col-lg-1">추천수</th>
+                  <th scope="col" class= "col-lg-2">작성일</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="col-lg-6 text-center" >대 황 린 가 드 는 어 디 득 점 왕 을 할 수 있 을 까 요 ?</td>
-                  <td class="col-lg-1 text-center">작성자 1</td>
-                  <td class="col-lg-1 text-center">대상 1</td>
-                  <td class="col-lg-1 text-center">2024-03-25</td>
+                  <td>651</td>
+                  <td >대 황 린 가 드 는 어 디 득 점 왕 을 할 수 있 을 까 요 ?</td>
+                  <td>작성자 1</td>
+                  <td>
+                  <div class="d-flex align-items-center gap-2 justify-content-center">
+                    <span class="badge bg-danger rounded-3 fw-semibold">구단</span>
+                  </div>
+                  </td>
+                  <td>15</td>
+                  <td>2024-03-25</td>
                 </tr>
                 <tr>
-                  <td class="col-lg-6 text-center" >게시물 제목 1</td>
-                  <td class="col-lg-1 text-center">작성자 1</td>
-                  <td class="col-lg-1 text-center">대상 1</td>
-                  <td class="col-lg-1 text-center">2024-03-25</td>
+                  <td>650</td>
+                  <td >게시물 제목 1</td>
+                  <td>작성자 1</td>
+                  <td>
+                    <div class="d-flex align-items-center gap-2 justify-content-center">
+                      <span class="badge bg-danger rounded-3 fw-semibold">구단</span>
+                    </div>
+                  </td>
+                  <td>8</td>
+                  <td>2024-03-25</td>
                 </tr>
                 <tr>
-                  <td class="col-lg-6 text-center" >게시물 제목 1</td>
-                  <td class="col-lg-1 text-center">작성자 1</td>
-                  <td class="col-lg-1 text-center">대상 1</td>
-                  <td class="col-lg-1 text-center">2024-03-25</td>
+                  <td>649</td>
+                  <td >게시물 제목 1</td>
+                  <td>작성자 1</td>
+                  <td>
+                    <div class="d-flex align-items-center gap-2 justify-content-center">
+                      <span class="badge bg-danger rounded-3 fw-semibold">구단</span>
+                    </div>
+                  </td>
+                  <td>0</td>
+                  <td>2024-03-25</td>
                 </tr>
                 <tr>
-                  <td class="col-lg-6 text-center" >게시물 제목 1</td>
-                  <td class="col-lg-1 text-center">작성자 1</td>
-                  <td class="col-lg-1 text-center">대상 1</td>
-                  <td class="col-lg-1 text-center">2024-03-25</td>
+                  <td>648</td>
+                  <td >게시물 제목 1</td>
+                  <td>작성자 1</td>
+                  <td>
+                    <div class="d-flex align-items-center gap-2 justify-content-center">
+                      <span class="badge bg-danger rounded-3 fw-semibold">구단</span>
+                    </div>
+                  </td>
+                  <td>1</td>
+                  <td>2024-03-25</td>
                 </tr>
                 <tr>
-                  <td class="col-lg-6 text-center" >게시물 제목 1</td>
-                  <td class="col-lg-1 text-center">작성자 1</td>
-                  <td class="col-lg-1 text-center">대상 1</td>
-                  <td class="col-lg-1 text-center">2024-03-25</td>
+                  <td>647</td>
+                  <td >게시물 제목 1</td>
+                  <td>작성자 1</td>
+                  <td>
+                  <div class="d-flex align-items-center gap-2 justify-content-center">
+                    <span class="badge bg-danger rounded-3 fw-semibold">구단</span>
+                  </div>
+                </td>
+                  <td>4</td>
+                  <td>2024-03-25</td>
                 </tr>
                 <tr>
-                  <td class="col-lg-6 text-center" >게시물 제목 1</td>
-                  <td class="col-lg-1 text-center">작성자 1</td>
-                  <td class="col-lg-1 text-center">대상 1</td>
-                  <td class="col-lg-1 text-center">2024-03-25</td>
+                  <td>646</td>
+                  <td >게시물 제목 1</td>
+                  <td>작성자 1</td>
+                  <td>
+                  <div class="d-flex align-items-center gap-2 justify-content-center">
+                    <span class="badge bg-danger rounded-3 fw-semibold">구단</span>
+                  </div>
+                </td>
+                  <td>15</td>
+                  <td>2024-03-25</td>
                 </tr>
                 <tr>
-                  <td class="col-lg-6 text-center" >게시물 제목 1</td>
-                  <td class="col-lg-1 text-center">작성자 1</td>
-                  <td class="col-lg-1 text-center">대상 1</td>
-                  <td class="col-lg-1 text-center">2024-03-25</td>
+                  <td>645</td>
+                  <td >게시물 제목 1</td>
+                  <td>작성자 1</td>
+                  <td>
+                  <div class="d-flex align-items-center gap-2 justify-content-center">
+                    <span class="badge bg-danger rounded-3 fw-semibold">구단</span>
+                  </div>
+                </td>
+                  <td>15</td>
+                  <td>2024-03-25</td>
                 </tr>
                 <tr>
-                  <td class="col-lg-6 text-center" >게시물 제목 1</td>
-                  <td class="col-lg-1 text-center">작성자 1</td>
-                  <td class="col-lg-1 text-center">대상 1</td>
-                  <td class="col-lg-1 text-center">2024-03-25</td>
+                  <td>644</td>
+                  <td >게시물 제목 1</td>
+                  <td>작성자 1</td>
+                  <td>
+                  <div class="d-flex align-items-center gap-2 justify-content-center">
+                    <span class="badge bg-danger rounded-3 fw-semibold">구단</span>
+                  </div>
+                </td>
+                  <td>15</td>
+                  <td>2024-03-25</td>
                 </tr>
                 <tr>
-                  <td class="col-lg-6 text-center" >게시물 제목 1</td>
-                  <td class="col-lg-1 text-center">작성자 1</td>
-                  <td class="col-lg-1 text-center">대상 1</td>
-                  <td class="col-lg-1 text-center">2024-03-25</td>
+                  <td>643</td>
+                  <td >게시물 제목 1</td>
+                  <td>작성자 1</td>
+                  <td>
+                  <div class="d-flex align-items-center gap-2 justify-content-center">
+                    <span class="badge bg-danger rounded-3 fw-semibold">구단</span>
+                  </div>
+                </td>
+                  <td>15</td>
+                  <td>2024-03-25</td>
                 </tr>
                 <tr>
-                  <td class="col-lg-6 text-center" >게시물 제목 1</td>
-                  <td class="col-lg-1 text-center">작성자 1</td>
-                  <td class="col-lg-1 text-center">대상 1</td>
-                  <td class="col-lg-1 text-center">2024-03-25</td>
+                  <td>642</td>
+                  <td >게시물 제목 1</td>
+                  <td>작성자 1</td>
+                  <td>
+                  <div class="d-flex align-items-center gap-2 justify-content-center">
+                    <span class="badge bg-danger rounded-3 fw-semibold">구단</span>
+                  </div>
+                </td>
+                  <td>15</td>
+                  <td>2024-03-25</td>
                 </tr>
                 <!-- 여기에 추가적인 게시물 행 추가 -->
               </tbody>
             </table>
-            <div class="text-end">
-            <a href="#" class="btn btn-light m-1 text-decoration-underline"><i class="ti ti-note"></i>게시글 작성</a>
+            <div>
+              <div class="row justify-content-end">
+                <div class="col-auto">
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="search" placeholder="123">
+                    <span class="input-group-text">
+                      <a href="#"><i class="ti ti-search" id="searchIcon"></i></a>
+                    </span>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <a href="#" class="btn btn-light text-decoration-underline"><i class="ti ti-note"></i>게시글 작성</a>
+                </div>
+              </div>
             </div>
             <div class="pagination d-flex justify-content-center">
               <a href="#" class="active">1</a>

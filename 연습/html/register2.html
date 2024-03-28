@@ -25,9 +25,9 @@
                 </a>
                 <form>
                   <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">구단 설정</label>
+                    <label for="teamselect" class="form-label">구단 설정</label>
                     <div>
-                      <select class="form-select">
+                      <select id="teamselect" class="form-select">
                         <option value="1">울산</option>
                         <option value="2">포항</option>
                         <option value="3">광주</option>
@@ -43,18 +43,24 @@
                       </select>
                     </div>
                   </div>
-                  <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">선호 선수</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div class="row mb-3">
+                    <div class="col-md-12">
+                      <label for="playerselect" class="form-label">선호 선수</label>
+                      <div id="playerList" class="input-group">
+                        <input type="text" id="playerselect" class="form-control" placeholder="선수명">
+                        <button id="addPlayerBtn" class="btn btn-outline-secondary" type="button">추가</button>
+                      </div>
+                    </div>
                   </div>
                   <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">선호 구단</label>
-                    <div class="alert alert-light">광주fc</div>
+                    <label for="selectteam" class="form-label">선호 구단</label>
+                    <input type="text" id="selTeam" class="form-control" disabled>
                   </div>
                   <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">선호 선수</label>
-                    <div class="alert alert-light">제갈제니</div>
+                    <label for="selectplayer" class="form-label">선호 선수 <i class="ti ti-xbox-x"></i></label>
+                    <input type="text" id="selPlayer" class="form-control" disabled>
                   </div>
+                </form>
                   <a href="login.html" class="btn btn-secondary w-100 py-8 fs-4 mb-4 rounded-2">Sign Up</a>
                   <div class="d-flex align-items-center justify-content-center">
                     <p class="fs-4 mb-0 fw-bold">Already have an Account?</p>
@@ -70,6 +76,8 @@
   </div>
   <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
   <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/연습/assets/js/register2.js"></script>
 </body>
 
 </html>
