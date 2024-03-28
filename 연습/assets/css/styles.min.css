@@ -5160,7 +5160,6 @@ fieldset:disabled .btn {
     border: 0;
     border-radius: var(--bs-dropdown-item-border-radius, 0)
 }
-
 .dropdown-item:focus,
 .dropdown-item:hover {
     color: var(--bs-dropdown-link-hover-color);
@@ -20248,6 +20247,7 @@ ul {
 
 .chat-box{
     max-height: 100%;
+    overflow-y: auto;
 }
 .small-logo{
     max-width: 10%;
@@ -20313,4 +20313,39 @@ ul {
 }
 #suggest_items{
     overflow: auto;
+}
+.subList{
+    display: flex
+}
+.subList li{
+    display: inline-block; /* 항목들을 가로로 나열 */
+    border-right: 1px solid #343a40; /* 오른쪽에 세로 선 추가 */
+    flex: 1;
+}
+.subList li:last-child {
+    border-right: none; /* 마지막 항목에서는 세로 선 제거 */
+  }
+  .result {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+    flex: 1;
+  }
+  .win {
+    background-color: var(--bs-success); /* 부트스트랩의 성공 색상 */
+    color: #fff; /* 흰색으로 표시 */
+  }
+  
+  .draw {
+    background-color: var(--bs-secondary); /* 부트스트랩의 성공 색상 */
+    color: #fff; /* 흰색으로 표시 */
+  }
+  
+  .lose {
+    background-color: var(--bs-danger); /* 부트스트랩의 성공 색상 */
+    color: #fff; /* 흰색으로 표시 */
+  }
+.main-team{
+    height: 400px;
 }

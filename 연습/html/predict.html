@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
   <link rel="shortcut icon" type="image/png" href="../assets/images/logos/ball_logo.png" />
   <link rel="stylesheet" href="../assets/css/styles.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -316,15 +317,224 @@
                 </div>
                 <div class="card col-lg-12">
                   <div class="card-body">
-                    <h5 class="card-title">마지막 문단</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                      the
-                      card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
+                    <h5 class="card-title mb-3">Sub-Entry</h5>
+                    <ul class="subList text-center">
+                      <li>팀이름</li>
+                      <li>123</li>
+                      <li>123</li>
+                      <li>123</li>
+                      <li>123</li>
+                      <li>123</li>
+                      <li>123</li>
+                      <li>123</li>
+                      <li>123</li>
+                      <li>123</li>
+                    </ul>
+                    <ul class="subList text-center">
+                      <li>팀이름</li>
+                      <li>123</li>
+                      <li>123</li>
+                      <li>123</li>
+                      <li>123</li>
+                      <li>123</li>
+                      <li>123</li>
+                      <li>123</li>
+                      <li>123</li>
+                      <li>123</li>
+                    </ul> 
                   </div>
                 </div>
+                <div class="card">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="card-body d-flex flex-column justify-content-center h-100">
+                        <h5 class="card-title fw-semibold mb-2">최근 전적 5 games</h5>
+                        <div class="d-flex flex-column align-items-center justify-content-center flex-grow-1">
+                          <p class="align-self-start my-2 fw-semibold">abc</p>
+                          <div id="teamA" class="d-flex flex-wrap mr-3 mb-2">
+                            <span class="result draw">무</span>
+                            <span class="result lose">패</span>
+                            <span class="result draw">무</span>
+                            <span class="result lose">패</span>
+                            <span class="result lose">패</span>
+                          </div>
+                          <div class="d-flex justify-content-center mb-2">
+                            <div>
+                              <div class="d-flex align-items-center">
+                                <label for="average-score" class="me-2">평균 득점 :</label>
+                                <div class="progress" style="width: 120px;">
+                                  <div class="progress-bar bg-primary" role="progressbar" style="width: 56%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="10">2.7</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex justify-content-center">
+                            <div>
+                              <div class="d-flex align-items-center">
+                                <label for="average-score" class="me-2">평균 실점 :</label>
+                                <div class="progress " style="width: 120px;">
+                                  <div class="progress-bar bg-info" role="progressbar" style="width: 50%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">2.5</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column align-items-center justify-content-center flex-grow-1">
+                          <p class="align-self-start my-2 fw-semibold">팀A</p>
+                          <div id="teamA" class="d-flex flex-wrap mr-3 mb-2">
+                            <span class="result win">승</span>
+                            <span class="result lose">패</span>
+                            <span class="result draw">무</span>
+                            <span class="result lose">패</span>
+                            <span class="result lose">패</span>
+                          </div>
+                          <div class="d-flex justify-content-center mb-2">
+                            <div>
+                              <div class="d-flex align-items-center">
+                                <label for="average-score" class="me-2">평균 득점 :</label>
+                                <div class="progress" style="width: 120px;">
+                                  <div class="progress-bar bg-primary" role="progressbar" style="width: 40%;" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5">2.21</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex justify-content-center">
+                            <div>
+                              <div class="d-flex align-items-center">
+                                <label for="average-score" class="me-2">평균 실점 :</label>
+                                <div class="progress " style="width: 120px;">
+                                  <div class="progress-bar bg-info" role="progressbar" style="width: 20%;" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5">1.22</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                      <div class="card-body">
+                        <h5 class="card-title fw-semibold mb-2">상대 전적 10 games</h5>
+                        <canvas id="doughnutChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="row">
+                    <div class="col">
+                      <div class="card-body">
+                        <h5 class="card-title fw-semibold mb-4">팀 A</h5>
+                        <!-- 최다 득점자와 최다 어시스트자 테이블 -->
+                        <div class="table-responsive">
+                          <table class="table table-sm">
+                            <thead>
+                              <tr class="mb-5">
+                                <th scope="col">최다 득점자</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Player A</td>
+                                <td>20 points</td>
+                              </tr>
+                              <tr>
+                                <td>Player B</td>
+                                <td>18 points</td>
+                              </tr>
+                              <tr>
+                                <td>Player B</td>
+                                <td>18 points</td>
+                              </tr>
+                              <!-- 추가적인 최다 득점자 행들 -->
+                            </tbody>
+                          </table>
+                        </div>
+                        
+                        <div class="table-responsive">
+                          <table class="table table-sm">
+                            <thead>
+                              <tr>
+                                <th scope="col">최다 어시스트자</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Player X</td>
+                                <td>15 assists</td>
+                              </tr>
+                              <tr>
+                                <td>Player Y</td>
+                                <td>12 assists</td>
+                              </tr>
+                              <tr>
+                                <td>Player Y</td>
+                                <td>12 assists</td>
+                              </tr>
+                              <!-- 추가적인 최다 어시스트자 행들 -->
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card-body">
+                        <h5 class="card-title fw-semibold mb-4">팀 B</h5>
+                        <!-- 최다 득점자와 최다 어시스트자 테이블 -->
+                        <div class="table-responsive">
+                          <table class="table table-sm">
+                            <thead>
+                              <tr class="mb-5">
+                                <th scope="col">최다 득점자</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Player A</td>
+                                <td>20 points</td>
+                              </tr>
+                              <tr>
+                                <td>Player B</td>
+                                <td>18 points</td>
+                              </tr>
+                              <tr>
+                                <td>Player B</td>
+                                <td>18 points</td>
+                              </tr>
+                              <!-- 추가적인 최다 득점자 행들 -->
+                            </tbody>
+                          </table>
+                        </div>
+                        
+                        <div class="table-responsive">
+                          <table class="table table-sm">
+                            <thead>
+                              <tr>
+                                <th scope="col">최다 어시스트자</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Player X</td>
+                                <td>15 assists</td>
+                              </tr>
+                              <tr>
+                                <td>Player Y</td>
+                                <td>12 assists</td>
+                              </tr>
+                              <tr>
+                                <td>Player Y</td>
+                                <td>12 assists</td>
+                              </tr>
+                              <!-- 추가적인 최다 어시스트자 행들 -->
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
               </div>
             </div>
           </div>
@@ -459,6 +669,7 @@
       </div>
     </div>
   </div>
+  <script src="../assets/js/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
   <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
   <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
