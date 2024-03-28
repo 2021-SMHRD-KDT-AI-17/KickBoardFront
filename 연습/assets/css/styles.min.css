@@ -20273,38 +20273,3 @@ ul {
     color: white;
     cursor: pointer;
 }
-.admin-button .btn{
-    width: 120px;
-}
-.mx100-mh100{
-    max-width: 100%;
-    max-height: 100%;
-}
-.team-lineup-a{
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-}
-.team-lineup-b{
-    position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-}
-.table-img {
-    background-image: url('/연습/assets/images/products/green.jpg');
-    background-position: center;
-    background-size: cover;
-    max-width: 100%;
-    max-width: 100%;
-    border-radius: 10px;
-}
-.table-text-color tr td {
-    color: white;
-    font-weight : bold;
-    width: 5px;
-}
-.team-name-row td {
-    border-bottom: 1px solid white; /* 보더 색상을 원하는 색상으로 변경 가능 */
-}
