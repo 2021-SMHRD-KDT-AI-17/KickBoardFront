@@ -5,6 +5,7 @@ const r_writer = document.getElementsByClassName("req_writer");
 const r_viewee = document.getElementsByClassName("req_viewee");
 const r_likes = document.getElementsByClassName("req_likes");
 const r_at = document.getElementsByClassName("req_at");
+document.getElementById("");
 let req_IdxList = [];
 let req_TitleList = [];
 let req_WriterList = [];
@@ -181,3 +182,6 @@ function getList(init, isPre, idx) {
         }
     })
 }
+likebutton.addEventListener('click',()=>{
+    Number(likes.innerText.split)
+})
