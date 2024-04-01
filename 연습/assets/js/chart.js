@@ -4,19 +4,18 @@
   var donutChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-      labels: ['승', '패', '무'],
+      labels: ['승','무','패'],
       datasets: [{
-        label: '# of Votes',
-        data: [1, 3, 3],
+        data: [1, 3, 7],
         backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)'
+          'rgba(0, 103, 172, 0.8)',
+          'rgba(198, 200, 202, 0.8)',
+          'rgba(238, 50, 36, 0.8)'
         ],
         borderColor: [
-          'rgba(255, 99, 132, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)'
+          'rgba(0, 103, 172, 1)',
+          'rgba(198, 200, 202, 1)',
+          'rgba(238, 50, 36, 1)'
         ],
         borderWidth: 1
       }]
