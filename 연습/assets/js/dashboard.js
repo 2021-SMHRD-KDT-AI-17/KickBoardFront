@@ -4,102 +4,62 @@ $(function () {
   // =====================================
   // rank-5
   // =====================================
-  var chart = {
-    series: [
-      { name: "순위 :", data: [1,2,6,7,9]},
-    ],
-
+  var options = {
+    series: [{
+      data: [10,2,1, 4, 5, 6, 12]
+    }],
     chart: {
-      type: "bar",
-      height: 300,
-      offsetX: -15,
-      toolbar: { show: true },
-      foreColor: "#adb0bb",
-      fontFamily: 'inherit',
-      sparkline: { enabled: false },
-    },
-
-
-    colors: ["#c6c8ca"],
-
-
-    plotOptions: {
-      bar: {
-        horizontal: false,
-        columnWidth: "35%",
-        borderRadius: [6],
-        borderRadiusApplication: 'end',
-        borderRadiusWhenStacked: 'all'
-      },
-    },
-    markers: { size: 0 },
-
-    dataLabels: {
-      enabled: false,
-    },
-
-
-    legend: {
-      show: false,
-    },
-
-
-    grid: {
-      borderColor: "rgba(0,0,0,0.0)",
-      strokeDashArray: 3,
-      xaxis: {
-        lines: {
-          show: false,
-        },
-      },
-    },
-
-    xaxis: {
-      type: "category",
-      categories: ["2019", "2020", "2021", "2022", "2023"],
-      labels: {
-        style: { cssClass: "grey--text lighten-2--text fill-color" },
-      },
-    },
-    yaxis: {
-      show: true,
-      min: 0,
-      max: 12,
-      tickAmount: 4,
-      labels: {
-        style: {
-          cssClass: "grey--text lighten-2--text fill-color",
-        },
-      },
+      type: 'line',
+      height: 300
     },
     stroke: {
-      show: true,
-      width: 3,
-      lineCap: "butt",
-      colors: ["transparent"],
+      curve: 'straight',
     },
-
-
-    tooltip: { theme: "light" },
-
-    responsive: [
-      {
-        breakpoint: 600,
-        options: {
-          plotOptions: {
-            bar: {
-              borderRadius: 3,
-            }
-          },
-        }
+    dataLabels: {
+      enabled: false
+    },
+    title: {
+      text: '최근 7년 구단 순위',
+      align: 'left'
+    },
+    markers: {
+      hover: {
+        sizeOffset: 4
       }
-    ]
-
-
+    },
+    xaxis: {
+      categories: ['2017','2018','2019', '2020', '2021', '2022', '2023'],
+    },
+    yaxis: {
+      min: 1,
+      max: 12,
+      reversed: true,
+      labels: {
+        formatter: function(value) {
+          return Math.round(value);
+        }
+      },
+      show: false // y축 라벨 숨기기
+    },
+    grid: {
+      show: false // 눈금선 숨기기
+    },
+    markers:{
+      show: true, // 마커 보이기
+      size: 5 // 마커 크기 설정
+    },
+    toolbar: {
+      show: false // 툴바 숨기기
+    }
   };
-
-  var chart = new ApexCharts(document.querySelector("#rank-5"), chart);
+  
+  var chart = new ApexCharts(document.querySelector("#rank-5"), options);
   chart.render();
+  
+  
+  
+  
+  
 
 
   // =====================================

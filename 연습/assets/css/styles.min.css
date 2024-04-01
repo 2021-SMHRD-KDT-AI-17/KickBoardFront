@@ -20350,6 +20350,12 @@ ul {
     height: 400px;
 }
 .club-title-teamBox{
+    background-image: url('/연습/assets/images/backgrounds/k-l-r.jpg');
+    background-size: cover;
+    padding-top: 5px;
+    border-radius: 10px;
+}
+.player-title{
     background-image: url('/연습/assets/images/backgrounds/k-l.jpg');
     background-size: cover;
     padding-top: 5px;
