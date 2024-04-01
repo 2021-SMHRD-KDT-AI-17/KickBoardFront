@@ -218,6 +218,63 @@ $(function () {
   new ApexCharts(document.querySelector("#rank"), rank).render();
 
 
+  // 평균 차트
+var options = {
+  series: [{
+    name: 'Series 1',
+    data: [15, 20, 10, 25, 30, 5, 28, 12] // 출전경기수, 득점, 슈팅, 도움, 패스 성공률, 드리블, 태클, 인터셉트
+  }],
+  chart: {
+    height: 350,
+    type: 'radar',
+  },
+  xaxis: {
+    categories: ['출전경기수', '득점', '슈팅', '도움', '패스 성공률', '드리블', '태클', '인터셉트']
+  },
+  yaxis: {
+    min: 0,
+    max: 30,
+    tickAmount: 6, // 수정된 부분
+    labels: {
+      formatter: function(val) {
+        return val.toFixed(0); // 소수점 제거
+      }
+    }
+  },
+  colors: ['#0067ac'] // 그래프 선의 색상
+};
+
+var chart = new ApexCharts(document.querySelector("#player-avg"), options);
+chart.render();
+
+
+// 세부 차트
+var options = {
+  series: [{
+    data: [65, 68, 70, 72, 75, 78, 80, 82, 85, 88]
+  }],
+  chart: {
+    type: 'bar',
+    height: 350
+  },
+  plotOptions: {
+    bar: {
+      borderRadius: 4,
+      horizontal: true,
+    }
+  },
+  dataLabels: {
+    enabled: false
+  },
+  xaxis: {
+    categories: ['득점', '도움', '슈팅', '유효 슈팅', '드리블', '키패스', '패스 성공률', '키패스', '태클', '인터셉트', '클리어링']
+  },
+  colors: ['#ee3224'] // 그래프 선의 색상
+};
+
+var chart = new ApexCharts(document.querySelector("#player-data"), options);
+chart.render();
+
 })
 
 
