@@ -2,17 +2,16 @@ $(function () {
 
 
   // =====================================
-  // Profit
+  // rank-5
   // =====================================
   var chart = {
     series: [
-      { name: "Earnings this month:", data: [355, 390, 300, 350, 390, 180, 355, 390] },
-      { name: "Expense this month:", data: [280, 250, 325, 215, 250, 310, 280, 250] },
+      { name: "순위 :", data: [1,2,6,7,9]},
     ],
 
     chart: {
       type: "bar",
-      height: 345,
+      height: 300,
       offsetX: -15,
       toolbar: { show: true },
       foreColor: "#adb0bb",
@@ -21,7 +20,7 @@ $(function () {
     },
 
 
-    colors: ["#5D87FF", "#49BEFF"],
+    colors: ["#c6c8ca"],
 
 
     plotOptions: {
@@ -46,7 +45,7 @@ $(function () {
 
 
     grid: {
-      borderColor: "rgba(0,0,0,0.1)",
+      borderColor: "rgba(0,0,0,0.0)",
       strokeDashArray: 3,
       xaxis: {
         lines: {
@@ -57,17 +56,15 @@ $(function () {
 
     xaxis: {
       type: "category",
-      categories: ["16/08", "17/08", "18/08", "19/08", "20/08", "21/08", "22/08", "23/08"],
+      categories: ["2019", "2020", "2021", "2022", "2023"],
       labels: {
         style: { cssClass: "grey--text lighten-2--text fill-color" },
       },
     },
-
-
     yaxis: {
       show: true,
       min: 0,
-      max: 400,
+      max: 12,
       tickAmount: 4,
       labels: {
         style: {
@@ -101,17 +98,17 @@ $(function () {
 
   };
 
-  var chart = new ApexCharts(document.querySelector("#chart"), chart);
+  var chart = new ApexCharts(document.querySelector("#rank-5"), chart);
   chart.render();
 
 
   // =====================================
   // Breakup
   // =====================================
-  var breakup = {
+  var record = {
     color: "#adb5bd",
-    series: [38, 40, 25],
-    labels: ["2022", "2021", "2020"],
+    series: [3, 1, 6],
+    labels: ["승", "무", "패"],
     chart: {
       width: 180,
       type: "donut",
@@ -138,7 +135,7 @@ $(function () {
     legend: {
       show: false,
     },
-    colors: ["#5D87FF", "#ecf2ff", "#F9F9FD"],
+    colors: ["#0067ac", "#c6c8ca", "#ee3224"],
 
     responsive: [
       {
@@ -156,7 +153,7 @@ $(function () {
     },
   };
 
-  var chart = new ApexCharts(document.querySelector("#breakup"), breakup);
+  var chart = new ApexCharts(document.querySelector("#record"), record);
   chart.render();
 
 
@@ -164,48 +161,64 @@ $(function () {
   // =====================================
   // Earning
   // =====================================
-  var earning = {
-    chart: {
-      id: "sparkline3",
-      type: "area",
-      height: 60,
-      sparkline: {
-        enabled: true,
+    var rank = {
+      chart: {
+        id: "sparkline3",
+        type: "area",
+        height: 100,
+        sparkline: {
+          enabled: true,
+        },
+        group: "sparklines",
+        fontFamily: "Plus Jakarta Sans', sans-serif",
+        foreColor: "#adb0bb",
       },
-      group: "sparklines",
-      fontFamily: "Plus Jakarta Sans', sans-serif",
-      foreColor: "#adb0bb",
-    },
-    series: [
-      {
-        name: "Earnings",
-        color: "#49BEFF",
-        data: [25, 66, 20, 40, 12, 58, 20],
+      series: [
+        {
+          name: ["rank"],
+          color: "#49BEFF",
+          data: [1, 3, 6, 8, 10],
+        },
+      ],
+      stroke: {
+        curve: "straight",
+        width: 2,
       },
-    ],
-    stroke: {
-      curve: "smooth",
-      width: 2,
-    },
-    fill: {
-      colors: ["#f3feff"],
-      type: "solid",
-      opacity: 0.05,
-    },
-
-    markers: {
-      size: 0,
-    },
-    tooltip: {
-      theme: "dark",
-      fixed: {
-        enabled: true,
-        position: "right",
+      fill: {
+        colors: ["#f3feff"],
+        type: "solid",
+        opacity: 0.00,
       },
-      x: {
-        show: false,
+      markers: {
+        size: 1,
       },
-    },
+      xaxis: {
+        categories: ["2019","2020","2021","2022","2023"], // x축 라벨 값 배열
+        labels: {
+          show: true
+        }
+      },
+      yaxis: {
+        reversed: true, // 그래프 반전
+        min: 0, // y축 최소값 설정
+        max: 10, // y축 최대값 설정
+      },
+      tooltip: {
+        theme: "dark",
+        fixed: {
+          enabled: true,
+          position: "right",
+        },
+        x: {
+          show: false,
+        },
+      },
   };
-  new ApexCharts(document.querySelector("#earning"), earning).render();
+
+  new ApexCharts(document.querySelector("#rank"), rank).render();
+
+
 })
+
+
+

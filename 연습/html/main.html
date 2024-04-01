@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>메인</title>
+  <title>main</title>
   <!-- tabler 아이콘 사용 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
   <link rel="shortcut icon" type="image/png" href="../assets/images/logos/ball_logo.png" />
@@ -30,8 +30,8 @@
         <!-- Sidebar navigation-->
         <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
           <ul id="sidebarnav">
-            <li class="nav-cap">
-              <i class="ti ti-dots nav-cap-icon fs-4"></i>
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
               <span class="hide-menu">Home</span>
             </li>
             <li class="sidebar-item">
@@ -42,8 +42,8 @@
                 <span class="hide-menu">Dashboard</span>
               </a>
             </li>
-            <li class="nav-cap">
-              <i class="ti ti-dots nav-cap-icon fs-4"></i>
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
               <span class="hide-menu">contents</span>
             </li>
             <li class="sidebar-item">
@@ -85,8 +85,8 @@
                   <span class="hide-menu">shop</span>
                 </a>
             </li>
-            <li class="nav-cap">
-              <i class="ti ti-dots nav-cap-icon fs-4"></i>
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
               <span class="hide-menu">profile</span>
             </li>
             <li class="sidebar-item">
@@ -164,33 +164,214 @@
       <div class="container-fluid">
         <div class="card">
           <div class="card-body">
+            <!-- 여기부터 -->
+            <div class="d-sm-flex d-block align-items-center justify-content-between mb-9">
+              <div class="mb-3 mb-sm-0">
+              </div>
+              <div>
+                <select class="form-select">
+                  <option value="1">울산 HD</option>
+                  <option value="2">포항</option>
+                  <option value="3">광주</option>
+                  <option value="4">전북 현대</option>
+                  <option value="1">인천 utd</option>
+                  <option value="2">대구</option>
+                  <option value="3">서울</option>
+                  <option value="4">대전 하나</option>
+                  <option value="1">제주 utd</option>
+                  <option value="2">강원</option>
+                  <option value="3">수원 FC</option>
+                  <option value="4">김천 상무</option>
+                </select>
+              </div>
+            </div>
             <div class="row">
-              <div class="col-md-4">
-                <h5 class="card-title fw-semibold mb-4">Card</h5>
-                <div class="card">
-                  <img src="../assets/images/products/s4.jpg" class="card-img-top" alt="...">
+              <div class="col-lg-8 d-flex align-items-strech">
+                <div class="card w-100">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                      the
-                      card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <!-- style="background-color:#004098;" -->
+                    <div class="club-title-box">
+                      <div class="club-title-teamBox text-center mb-3">
+                        <img src="/연습/assets/images/logos/ball_logo.png" class="img-emble">
+                        <ul class="">
+                          <li class="club-list">울산 현대</li>
+                          <li class="club-list">GANGWON FC</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center align-items-center mb-2">
+                      <div class="col-lg-6">
+                        <div class="card">
+                            <img src="/연습/assets/images/backgrounds/bg1.jpg " class="w-100 formation-img">
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <!-- 테이블 영역 -->
+                        <div class="card">
+                          <table class="table table-sm text-center mb-0">
+                           <!-- 테이블 헤더 -->
+                           <thead class="table-head">
+                            <tr>
+                             <th colspan="3">득점 순위</th>
+                            </tr>
+                          </thead>
+                           <!-- 테이블 바디 -->
+                           <tbody>
+                            <tr class="table-head-2">
+                              <th scope="col">순위</th>
+                              <th scope="col">도움 수</th>
+                              <th scope="col">선수</th>
+                             </tr>
+                            <tr>
+                             <td>1</td>
+                             <td>3</td>
+                             <td>제갈제니</td>
+                            </tr>
+                            <tr>
+                             <td>2</td>
+                             <td>2</td>
+                             <td>김옥지</td>
+                            </tr>
+                            <tr>
+                             <td>3</td>
+                             <td>1</td>
+                             <td>김빵빵</td>
+                            </tr>
+                            </tbody>
+                          </table>
+                          <table class="table table-sm text-center mb-0">
+                            <!-- 테이블 헤더 -->
+                            <thead class="table-head">
+                              <tr>
+                               <th colspan="3">도움 순위</th>
+                              </tr>
+                            </thead>
+                            <!-- 테이블 바디 -->
+                            <tbody>
+                              <tr class="table-head-2">
+                                <th scope="col">순위</th>
+                                <th scope="col">도움 수</th>
+                                <th scope="col">선수</th>
+                               </tr>
+                              <tr>
+                               <td>1</td>
+                               <td>3</td>
+                               <td>제갈제니</td>
+                              </tr>
+                              <tr>
+                               <td>2</td>
+                               <td>2</td>
+                               <td>김옥지</td>
+                              </tr>
+                              <tr>
+                               <td>3</td>
+                               <td>1</td>
+                               <td>김빵빵</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        
+                      </div>
+
+                     </div>
+                     <div id="rank-5"></div>
+
                   </div>
                 </div>
               </div>
-              
-              <div class="col-md-4">
-                <h5 class="card-title fw-semibold mb-4">Titles, text, and links</h5>
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                      the
-                      card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
+              <div class="col-lg-4">
+                <div class="row">
+                    <!-- Yearly Breakup -->
+                    <div class="card overflow-hidden">
+                      <div class="card-body p-4">
+                        <h5 class="card-title mb-9 fw-semibold text-b justify-content-between">올 시즌 전적</h5>
+                        <div class="row align-items-center">
+                          <div class="col-8">
+                            <h5 class="fw-semibold mb-3">현재 순위 : <span>1위</span></h5>
+                            <div class="d-flex align-items-center mb-3">
+                              <p class="text-dark me-1 fs-3 mb-0">최근 5경기 전적</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                              <div class="me-4">
+                                <div id="teamA" class="d-flex flex-wrap mr-3 mb-2">
+                                  <span class="result draw">무</span>
+                                  <span class="result lose">패</span>
+                                  <span class="result draw">무</span>
+                                  <span class="result lose">패</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div class="d-flex justify-content-center">
+                              <div id="record"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+                    <!-- Monthly Earnings -->
+                    <div class="card w-100">
+                      <div class="card-body p-4">
+                        <div class="mb-4">
+                          <h5 class="card-title fw-semibold">일정</h5>
+                        </div>
+                        <ul class="timeline-widget mb-0 position-relative mb-n5">
+                          <li class="timeline-item d-flex position-relative overflow-hidden">
+                            <div class="timeline-time text-dark flex-shrink-0 text-end">2024.01.01</div>
+                            <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                              <span class="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
+                              <span class="timeline-badge-border d-block flex-shrink-0"></span>
+                            </div>
+                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold"><span>광주</span>VS<span>서울</span></div>
+                          </li>
+                          <li class="timeline-item d-flex position-relative overflow-hidden">
+                            <div class="timeline-time text-dark flex-shrink-0 text-end">2024.01.01</div>
+                            <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                              <span class="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
+                              <span class="timeline-badge-border d-block flex-shrink-0"></span>
+                            </div>
+                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold"><span>광주</span>VS<span>서울</span></div>
+                          </li>
+                          <li class="timeline-item d-flex position-relative overflow-hidden">
+                            <div class="timeline-time text-dark flex-shrink-0 text-end">2024.01.01</div>
+                            <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                              <span class="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
+                              <span class="timeline-badge-border d-block flex-shrink-0"></span>
+                            </div>
+                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold"><span>광주</span>VS<span>서울fc</span></div>
+                          </li>
+                          <li class="timeline-item d-flex position-relative overflow-hidden">
+                            <div class="timeline-time text-dark flex-shrink-0 text-end">2024.01.01</div>
+                            <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                              <span class="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
+                              <span class="timeline-badge-border d-block flex-shrink-0"></span>
+                            </div>
+                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold">광주fc vs 전북 현대 모터스</div>
+                          </li>
+                          <li class="timeline-item d-flex position-relative overflow-hidden">
+                            <div class="timeline-time text-dark flex-shrink-0 text-end">2024.01.01</div>
+                            <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                              <span class="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
+                            </div>
+                            <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold">전북 현대 모터스 vs 서울fc</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="card overflow-hidden">
+                      <div class="card-body p-4 align-items-center">
+                        <div>
+                            <h5 class="card-title mb-3 fw-semibold">Follow</h5>
+                            <p class="mb-3">해당 구단을 팔로우 하려면 버튼을 눌러주세요.</p>
+                            <div class="d-flex justify-content-end">
+                              <button type="button" class="btn btn-outline-primary"><i class="ti ti-bell"></i>팔로우</button>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
                 </div>
               </div>
             </div>
@@ -200,7 +381,6 @@
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
-  <script src="/연습/js모음/js.js"></script>
   <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
   <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/sidebarmenu.js"></script>

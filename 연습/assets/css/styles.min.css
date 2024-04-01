@@ -497,6 +497,7 @@ tr {
     border-color: inherit;
     border-style: solid;
     border-width: 0
+    
 }
 
 label {
@@ -2858,7 +2859,7 @@ progress {
     --bs-table-hover-bg: #3a4455;
     --bs-table-hover-color: #fff;
     color: var(--bs-table-color);
-    border-color: var(--bs-table-border-color)
+    border-color: var(--bs-table-border-color);
 }
 
 .table-responsive {
@@ -6213,7 +6214,6 @@ fieldset:disabled .btn {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
-    
     padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
     color: var(--bs-card-color)
 }
@@ -20159,7 +20159,7 @@ ul {
 
 .timeline-widget .timeline-item .timeline-badge-wrap .timeline-badge {
     width: 12px;
-    height: 12px;
+    height: 10px;
     border-radius: 50px;
     background-color: transparent
 }
@@ -20328,24 +20328,50 @@ ul {
   .result {
     display: inline-block;
     padding: 5px 10px;
-    border: 1px solid #ccc;
+    border-radius: 10px;
     margin-right: 5px;
     flex: 1;
   }
   .win {
-    background-color: var(--bs-success); /* 부트스트랩의 성공 색상 */
+    background-color: #0067ac; 
     color: #fff; /* 흰색으로 표시 */
   }
   
   .draw {
-    background-color: var(--bs-secondary); /* 부트스트랩의 성공 색상 */
+    background-color: #c6c8ca; 
     color: #fff; /* 흰색으로 표시 */
   }
   
   .lose {
-    background-color: var(--bs-danger); /* 부트스트랩의 성공 색상 */
+    background-color: #ee3224; 
     color: #fff; /* 흰색으로 표시 */
   }
 .main-team{
     height: 400px;
+}
+.club-title-teamBox{
+    background-image: url('/연습/assets/images/backgrounds/k-l.jpg');
+    background-size: cover;
+    padding-top: 5px;
+    border-radius: 10px;
+}
+.club-list{
+    font-size: small;
+    color: white;
+}
+.img-emble{
+    width: 50px;
+    border-radius: 10px;
+    margin-bottom: 3px;
+}
+.formation-img{
+    border-radius: 10px;
+}
+.table-head {
+    background-color: rgba(0, 28, 72, 0.9); /* 투명도 조절 */
+    color: white;
+}
+.table-head-2{
+    background-color: #0067ac;
+    color: white;
 }
