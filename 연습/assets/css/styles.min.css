@@ -20350,6 +20350,12 @@ ul {
     height: 400px;
 }
 .club-title-teamBox{
+    background-image: url('/연습/assets/images/backgrounds/k-l-r.jpg');
+    background-size: cover;
+    padding-top: 5px;
+    border-radius: 10px;
+}
+.player-title{
     background-image: url('/연습/assets/images/backgrounds/k-l.jpg');
     background-size: cover;
     padding-top: 5px;
@@ -20374,4 +20380,18 @@ ul {
 .table-head-2{
     background-color: #0067ac;
     color: white;
+}
+.plyer-img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.product-img{
+    
+}
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    opacity: 1; /* 화살표 항상 표시 */
 }
