@@ -74,11 +74,13 @@ function showNewsList(startN) {
         if (news_imgList[i] != null) {
             imgs[listnum].setAttribute('src', news_imgList[i]);
             titles[listnum].innerText = news_titleList[i];
-            links[listnum].innerText = news_linkList[i];
+            links[listnum].setAttribute("onclick", "location.href='" + news_linkList[i] + "'");
+            links[listnum].setAttribute("style", "cursor:pointer;");
         } else {
             imgs[listnum].setAttribute('src', "resources/assets/images/logos/ball_logo.png");
             titles[listnum].innerText = "아직 기사를 덜 수집했습니다 기다려 주세요";
-            links[listnum].innerText = "";
+            links[listnum].classList.remove('bg-onclick');
+            links[listnum].classList.remove('style');
         }
         listnum++;
     }
@@ -117,15 +119,15 @@ function getList(init, isPre, idx) {
             news_imgList = [];
             news_titleList = [];
             news_linkList = [];
-            news_lastIdx = data[data.length - 1].article_idx;
-            news_firstIdx = data[0].article_idx;
-            for (var i = 0; i < data.length; i++) {
-                if(data[i]!=null){
+            if(data.length!=0){
+                news_lastIdx = data[data.length - 1].article_idx;
+                news_firstIdx = data[0].article_idx;
+                for (var i = 0; i < data.length; i++) {
                     news_imgList.push(data[i].article_img);
                     news_titleList.push(data[i].article_title);
                     news_linkList.push(data[i].article_url);
                 }
-            }
+			}
             showNewsList(0);
             pagebuttonShow(data.length,news_lastIdx);
         }, error: () => {
