@@ -11,7 +11,7 @@ $(function () {
     }],
     chart: {
       type: 'line',
-      height: 300
+      height: 250
     },
     stroke: {
       curve: 'straight',

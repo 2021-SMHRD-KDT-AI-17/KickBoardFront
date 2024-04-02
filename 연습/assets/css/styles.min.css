@@ -20181,7 +20181,7 @@ ul {
     background-color: #f7f7f7; /* 채팅 박스 배경색 */
     border-radius: 10px; /* 채팅 박스 둥근 모서리 */
     padding: 10px; /* 채팅 박스 내부 여백 */
-    height: 100%;
+    overflow-y: scroll; /* 세로 방향으로 항상 스크롤을 표시합니다. */
   }
 .message {
     background-color: #ffffff; /* 메시지 배경색 */
@@ -20350,13 +20350,13 @@ ul {
     height: 400px;
 }
 .club-title-teamBox{
-    background-image: url('/연습/assets/images/backgrounds/k-l-r.jpg');
+    background-image: url('/연습/assets/images/backgrounds/title.jpg');
     background-size: cover;
     padding-top: 5px;
     border-radius: 10px;
 }
 .player-title{
-    background-image: url('/연습/assets/images/backgrounds/k-l.jpg');
+    background-image: url('/연습/assets/images/backgrounds/p-t.jpg');
     background-size: cover;
     padding-top: 5px;
     border-radius: 10px;
